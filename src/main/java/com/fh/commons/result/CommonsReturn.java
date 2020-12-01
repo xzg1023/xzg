@@ -11,6 +11,7 @@ public class CommonsReturn {
     @ApiModelProperty("查询出来的数据")
     private Object data;
 
+
     private CommonsReturn(Integer code,String  msg){
         this.code=code;
         this.msg=msg;

@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  */
 @Configuration
 public class CorsConfig extends WebMvcConfigurationSupport {
+
     @Autowired
     private CorsHandlerInterceptor corsHandlerInterceptor;
 

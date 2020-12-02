@@ -16,7 +16,6 @@ public class CorsConfig extends WebMvcConfigurationSupport {
     @Autowired
     private CorsHandlerInterceptor corsHandlerInterceptor;
 
-
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(corsHandlerInterceptor).addPathPatterns("/**");

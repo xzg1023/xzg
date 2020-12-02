@@ -21,6 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class TUserController {
+
     @Autowired
     private ITUserService userService;
     @ApiOperation("获取所有用户列表")

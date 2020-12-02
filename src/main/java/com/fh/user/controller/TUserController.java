@@ -25,6 +25,7 @@ public class TUserController {
     private ITUserService userService;
     @ApiOperation("获取所有用户列表")
     @GetMapping
+
     public CommonsReturn queryList(Page<TUser> page){
         userService.page(page);
         return CommonsReturn.success(page);

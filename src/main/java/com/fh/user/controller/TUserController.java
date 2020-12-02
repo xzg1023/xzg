@@ -2,6 +2,7 @@ package com.fh.user.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fh.commons.result.CommonsReturn;
 import com.fh.user.entity.TUser;
 import com.fh.user.service.ITUserService;
@@ -24,9 +25,9 @@ public class TUserController {
     private ITUserService userService;
     @ApiOperation("获取所有用户列表")
     @GetMapping
-    public CommonsReturn queryList(){
-        List<TUser> userList = userService.list();
-        return CommonsReturn.success(userList);
+    public CommonsReturn queryList(Page<TUser> page){
+        userService.page(page);
+        return CommonsReturn.success(page);
     }
     @ApiOperation("根据用户名称查询用户信息")
     @GetMapping("/{name}")
